@@ -1,0 +1,77 @@
+{
+  "asOf": "2026-10-28",
+  "isSample": true,
+  "note": "Sample reference rates for demonstration. Replace these with the day's NECC egg rates or your local mandi prices before going live.",
+  "rates": [
+    {
+      "id": "egg-single",
+      "product": "Eggs (single)",
+      "category": "EGG",
+      "unit": "per egg",
+      "price": 5.6,
+      "region": "Namakkal",
+      "keywords": []
+    },
+    {
+      "id": "egg-tray",
+      "product": "Eggs (tray of 30)",
+      "category": "EGG",
+      "unit": "per tray",
+      "price": 168,
+      "region": "Namakkal",
+      "keywords": [
+        "TRAY",
+        "30"
+      ]
+    },
+    {
+      "id": "egg-dozen",
+      "product": "Eggs (dozen)",
+      "category": "EGG",
+      "unit": "per dozen",
+      "price": 72,
+      "region": "Retail, South India",
+      "keywords": [
+        "DOZEN",
+        "12"
+      ]
+    },
+    {
+      "id": "broiler-live",
+      "product": "Broiler (live)",
+      "category": "BIRD",
+      "unit": "per kg",
+      "price": 105,
+      "region": "Karnataka",
+      "keywords": [
+        "KG",
+        "LIVE"
+      ]
+    },
+    {
+      "id": "chick-broiler",
+      "product": "Day-old broiler chick",
+      "category": "BIRD",
+      "unit": "per chick",
+      "price": 32,
+      "region": "Karnataka",
+      "keywords": [
+        "CHICK"
+      ]
+    },
+    {
+      "id": "layer-feed",
+      "product": "Layer mash feed (50 kg bag)",
+      "category": "FEED",
+      "unit": "per bag",
+      "price": 2100,
+      "region": "Karnataka",
+      "keywords": [
+        "BAG",
+        "50KG",
+        "50 KG",
+        "MASH"
+      ]
+    }
+  ]
+}

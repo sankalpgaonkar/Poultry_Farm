@@ -1,0 +1,31 @@
+# Render Blueprint: one web service that runs the API and serves the built website.
+# Render -> New -> Blueprint -> pick this repo. Then fill in the secret values it asks for.
+services:
+  - type: web
+    name: poultrysmart
+    runtime: node
+    plan: free
+    region: singapore          # closest Render region to India
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health-check
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: MONGODB_URI
+        sync: false            # paste your MongoDB Atlas connection string
+      - key: JWT_SECRET
+        generateValue: true    # Render creates a long random secret
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: GEMINI_API_KEY
+        sync: false            # optional; leave empty to run AI in offline mode
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: CLIENT_ORIGIN
+        sync: false            # only if a separate frontend (e.g. Vercel) calls this API
